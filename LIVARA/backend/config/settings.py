@@ -1,7 +1,11 @@
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = "django-insecure-livara-local-development-only-change-before-deployment"
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY",
+    "django-insecure-local-development-only"
+)
 DEBUG = True
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
