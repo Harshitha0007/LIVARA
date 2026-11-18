@@ -9,7 +9,7 @@ import {
 import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
 import L from "leaflet";
 
-const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000/api";
+const API = import.meta.env.VITE_API_URL || "https://livara.onrender.com/api";
 const api = axios.create({ baseURL: API });
 const categories = [
   { value: "food", label: "Food assistance", icon: Utensils },
